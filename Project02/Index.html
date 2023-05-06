@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+    <style>
+        body {
+            background: #ffffff;
+        }
+        .ul--nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            list-style: none;
+        }
+        .ul--nav * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transform: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        .ul--nav a {
+            color: rgba(red, green, blue, alpha);
+            position: relative;
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+        }
+        .ul--nav a::before,
+        .ul--nav a::after {
+            position: absolute;
+            content: "";
+            width: 15em;
+            height: 15em;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+            opacity: 0;
+        }
+        .ul--nav a::before {
+            right: 0;
+            bottom: 0;
+            border-right: 3px solid #07d111;
+            border-top: 3px solid #07d111;
+            -webkit-transform: translate(-100%, 50%);
+            transform: translate(-100%, 50%);
+        }
+        .ul--nav a::after {
+            left: 0;
+            bottom: 0;
+            border-left: 3px solid #07d111;
+            border-bottom: 3px solid #07d111;
+            -webkit-transform: translate(100%, 50%);
+            transform: translate(100%, 50%);
+        } 
+        .ul--nav a:hover,
+        .ul--nav .home a {
+            color: #ffffff;
+        }
+        .ul--nav a:hover:before,
+        .ul--nav :hover:home a:before,
+        .ul--nav a:hover:after,
+        .ul--nav :hover:home a:after {
+            opacity: 1;
+            -webkit-transform: translate(0%, 0%,);
+            transform: translate(0%, 0%,);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav--container">
+        <ul class="ul--nav">
+            <li class="home"><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Skills</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
